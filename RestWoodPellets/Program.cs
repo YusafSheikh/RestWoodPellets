@@ -2,7 +2,7 @@ using WoodPelletLib;
 using RestWoodPellets.Repository;
 using RestWoodPellets.Controllers;
 
-const string policyName = "AllowAll";
+//const string policyName = "AllowAll";
 
 var builder = WebApplication.CreateBuilder(args);
 

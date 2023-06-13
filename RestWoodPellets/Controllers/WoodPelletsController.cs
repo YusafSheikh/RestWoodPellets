@@ -18,6 +18,8 @@ namespace RestWoodPellets.Controllers
         }
 
         // GET: api/<WoodPelletsController>
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [HttpGet]
         public IEnumerable<WoodPellet> Get()
         {
@@ -26,6 +28,8 @@ namespace RestWoodPellets.Controllers
         }
 
         // GET api/<WoodPelletsController>/5
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpGet("{id}")]
         public WoodPellet Get(int id)
         {
@@ -34,6 +38,8 @@ namespace RestWoodPellets.Controllers
         }
 
         // POST api/<WoodPelletsController>
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpPost]
         public WoodPellet Post([FromBody] WoodPellet newWoodPellet)
         {
@@ -42,6 +48,9 @@ namespace RestWoodPellets.Controllers
         }
 
         // PUT api/<WoodPelletsController>/5
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpPut("{id}")]
         public ActionResult<WoodPellet> Put(int id, [FromBody] WoodPellet updates)
         {
@@ -50,6 +59,8 @@ namespace RestWoodPellets.Controllers
         }
 
         // DELETE api/<WoodPelletsController>/5
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpDelete("{id}")]
         public WoodPellet Delete(int id)
         {
